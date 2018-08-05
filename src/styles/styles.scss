@@ -1,0 +1,259 @@
+$red_btn_color: #FF0000;
+$red_btn_color_hover: #B20000;
+$green_btn_color: #00CC00;
+$green_btn_color_hover: #009900;
+$violet_btn_color: #8A2BE2;
+$violet_btn_color_hover: #521987;
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+body, html {
+  width: 100%;
+  background: #4C4CFF;
+}
+#container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+#Menu {
+  background: #B105FF;
+  width: 20%;
+  text-align: center;
+  border-right: 1px solid #222;
+  position: fixed;
+  height: 100%;
+  h1 {
+    color: #222;
+    margin-top: 30px;
+    font-size: 42pt;
+  }
+  button {
+    width: 80%;
+    background: $green_btn_color;
+    color: #fff;
+    font-size: 22pt;
+    padding: 10px 0;
+    margin-top: 10px;
+    border: 1px solid #222;
+  }
+  button:hover {
+    cursor: pointer;
+    background: $green_btn_color_hover;
+  }
+  button#remove_btn {
+    background: $red_btn_color;
+    color: #fff;
+  }
+  button#remove_btn:hover {
+    background: $red_btn_color_hover;
+  }
+  h2 {
+    margin-top: 35px;
+    font-size: 30pt;
+ }
+}
+#content {
+  background: #4C4CFF;
+  width: 80%;
+  margin-left: 20%;
+  height: 100%;
+}
+#recipes {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  .recipeName {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 80%;
+    height: 50px;
+    font-size: 18pt;
+    padding: 10px;
+    background: #ffff99;
+    animation: fadein 1s;
+    border: 1px solid #222;
+  }
+  .recipeName:hover {
+    cursor: pointer;
+    background: #E5E589;
+  }
+}
+/* Add Recipe Form */
+#addRecipeForm {
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  text-align: center;
+  input, textarea {
+    width: 100%;
+    font-size: 16pt;
+    border: 1px solid #222;
+    padding: 15px;
+  }
+  textarea {
+    margin-top: 15px;
+  }
+  button {
+    width: 60%;
+    font-size: 26pt;
+    padding: 20px 0;
+    background: $red_btn_color;
+    color: #fff;
+    border: 0;
+    margin-top: 15px;
+  }
+  button:hover {
+    background: $red_btn_color_hover;
+    cursor: pointer;
+  }
+  button:first-of-type {
+   background: $green_btn_color;
+ }
+  button:first-of-type:hover {
+   background: $green_btn_color_hover;
+  }
+}
+/* End */
+/* All recipes */
+#allRecipes, #singleRecipe {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.allRecipe {
+  background: #ffff99;
+  margin-top: 30px;
+  border-radius: 5px;
+  border: 1px solid #222;
+  &:last-child {
+    margin-bottom: 30px;
+  }
+  .upPart {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    p {
+      margin-top: 20px;
+      font-size: 30pt;
+    }
+    .buttonsDiv {
+      width: 20%;
+      margin-top: 20px;
+    }
+    .divForFlex {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+    button {
+      font-size: 12pt;
+      padding: 6px 0;
+      width: 46%;
+      background: $red_btn_color;
+      color: #fff;
+      border: 0;
+    }
+    button:hover {
+      background: $red_btn_color_hover;
+      cursor: pointer;
+    }
+    button:first-of-type {
+      background: $violet_btn_color;
+    }
+    button:first-of-type:hover {
+      background: $violet_btn_color_hover;
+    }
+  }
+}
+div.ingridients {
+  width: 95%;
+  border-top: 1px solid #222;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  h1 {
+    margin-top: 25px;
+    font-size: 22pt;
+  }
+  pre {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-bottom: 25px;
+    font-size: 16pt;
+  }
+}
+div.editForm {
+  background: #383F38;
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border: 1px solid #383F38;
+  border-radius: 3px;
+  p {
+    color: #fff;
+    font-size: 20pt;
+    padding: 20px 0 20px 20px;
+  }
+  input, textarea {
+    margin-left: 20px;
+  }
+  input {
+    padding: 10px;
+    font-size: 16pt;
+    width: 60%;
+  }
+  textarea {
+    width: 80%;
+    font-size: 16pt;
+    border: 1px solid #222;
+    padding: 15px;
+  }
+  button {
+    font-size: 16pt;
+    padding: 10px 0;
+    width: 20%;
+    background: $red_btn_color;
+    color: #fff;
+    border: 0;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+  }
+  button:hover {
+    background: $red_btn_color_hover;
+    cursor: pointer;
+  }
+  button:first-of-type {
+    margin-left: 20px;
+    background: $violet_btn_color;
+  }
+  button:first-of-type:hover {
+    background: $violet_btn_color_hover;
+  }
+}
+/* End */
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+  animation: fadein 1s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
