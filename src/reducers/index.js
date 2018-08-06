@@ -56,7 +56,7 @@ const recipeReducers = (state = [], action) => {
         state = state.slice()
         state[action.payload][3] = true
         let b = action.payload
-        for (var i = 0; i < state.length; i++) {
+        for (let i = 0; i < state.length; i++) {
           if (i !== b) {
             document.getElementById(i).classList.remove('visible')
           } else {
@@ -67,6 +67,13 @@ const recipeReducers = (state = [], action) => {
           if (i !== action.payload) {
             state[i][3] = false
           }
+        }
+        return state
+        break
+      case 'EDIT_FORM_TO_DEFAULT':
+        state = state.slice()
+        for (let i = 0; i < state.length; i++) {
+          state[i][2] = false
         }
         return state
     default:

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-import {clearState, toggleState} from '../actions/'
+import {clearState, toggleState, editFormToDefault} from '../actions/'
 import Recipes from './recipes.js'
 import AllRecipes from './allRecipes'
 
@@ -22,6 +22,7 @@ class Menu extends Component {
         }}>Add a new recipe</button><br />
         <button id="show_btn" onClick={() => {
           this.props.toggleState()
+          this.props.editFormToDefault()
           if (document.getElementById("singleRecipe").classList.contains('visible')) {
             document.getElementById("singleRecipe").classList.remove('visible')
           }
@@ -43,6 +44,6 @@ class Menu extends Component {
 }
 
 const mapDispatchToProps = (dispatch) =>
-  bindActionCreators({clearState, toggleState}, dispatch)
+  bindActionCreators({clearState, toggleState, editFormToDefault}, dispatch)
 
 export default connect(() => {}, mapDispatchToProps)(Menu)

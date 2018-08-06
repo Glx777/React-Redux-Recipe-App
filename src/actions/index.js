@@ -40,3 +40,7 @@ export const showSingleRecipe = recipeId => ({
   type: 'SHOW_SINGLE_RECIPE',
   payload: recipeId
 })
+
+export const editFormToDefault = () => ({
+  type: 'EDIT_FORM_TO_DEFAULT'
+})
